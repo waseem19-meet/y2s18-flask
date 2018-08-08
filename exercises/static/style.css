@@ -1,3 +1,12 @@
 /* Put your CSS Styling here! */
+/*body {
+	background-color : darkblue}*/
+
+
 body {
-	background-color : darkblue}
+	background-color: lightgreen
+}
+
+h1{
+	border: thick;
+}

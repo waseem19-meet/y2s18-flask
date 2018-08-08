@@ -6,9 +6,24 @@
 	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename ='style.css')}}">
 </head>
 <body>
-	<h1>my favorite sport is tennis</h1>
+	<h1>My Favorite players are:</h1>
 	<br>
-	<p>Tennis is a racket sport that can be played individually against a single opponent (singles) or between two teams of two players each (doubles). Each player uses a tennis racket that is strung with cord to strike a hollow rubber ball covered with felt over or around a net and into the opponent's court. The object of the game is to maneuver the ball in such a way that the opponent is not able to play a valid return. The player who is unable to return the ball will not gain a point, while the opposite player will.</p>
+	<ol>
+		{% for player in players%}
+		<li >{{player}}</li>
+	{%endfor%}
+	</ol>
+	<br>
+	<p>do you like the same players? </p>
+	<p>{{likes_same_sport}}</p>
+	{%if likes_same_sport == True%}
+	<p>YAY! we like the same players</p>
+	{%else%}
+	<p>OH no why don't you not like those players?!</p>
+
+	{%endif%}
+
+	
 
 </body>
 </html>
